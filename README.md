@@ -59,7 +59,7 @@ Vous êtes libre de choisir le langage de programmation de votre choix. Nous rec
 
 ## 📡 Accès à l'API
 
-L'API est disponible à l'adresse suivante :
+L'utilisation de l'API fourni est obligatoire et est disponible à l'adresse suivante :
 
 **URL de base :** `https://ai-models.autocomply.ca`
 
@@ -112,7 +112,7 @@ Content-Type: application/json
 ```
 ### Endpoint : POST `/ask`
 
-Cet endpoint permet de traiter une page de PDF en l'envoyant à un modèle d'IA visionnaire.
+Cet endpoint permet de traiter une query text.
 
 **URL complète :** `https://ai-models.autocomply.ca/ask`
 
@@ -268,7 +268,9 @@ Ce dépôt contient des fichiers d'exemple pour vous aider à démarrer :
 
 ### 4. Format de Sortie Attendu
 
-Votre fonction doit retourner une liste de sections avec leurs pages de début et de fin. Format suggéré :
+Votre fonction doit retourner une liste de sections dans leur ordre d'apparition avec leurs pages de début et de fin.
+
+Format obligatoire :
 
 ```json
 {
@@ -286,6 +288,7 @@ Votre fonction doit retourner une liste de sections avec leurs pages de début e
   ]
 }
 ```
+Ce résultat doit être sauvegardé dans un fichier nommé  `result.json` à la racine de votre dossier d'execution et de soumission.
 
 **⚠️ IMPORTANT - Noms des Sections :**
 
