@@ -259,7 +259,7 @@ def build_sections_from_text(pdf_path: str) -> List[Dict]:
     final = finalize_ranges(refined, total_pages)
     return final
 
-def save_result_json(sections: List[Dict], out_path: str = "result.json"):
+def save_result_json(sections: List[Dict], out_path: str = "LesRigolos\result.json"):
     data = {"sections": sections}
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
